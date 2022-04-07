@@ -1,0 +1,32 @@
+.btn_qty {
+  background-color: #000;
+  color: #fff;
+  height: 52px;
+  margin-top: 7px;
+}
+
+.input_qty {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  margin-top: 7px;
+}
+
+.pdt_name {
+  font-size: xx-large; letter-spacing: 0.03rem; margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+  .images_container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .details_container {
+    margin-top: 20px;
+  }
+
+  .pdt_name {
+    font-size: x-large;
+  }
+}

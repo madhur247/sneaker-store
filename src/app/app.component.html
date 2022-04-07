@@ -1,0 +1,29 @@
+<div class="container">
+  <nav class="navbar fixed-top navbar-light bg-light" style="background-color: #fff !important; z-index: 100;">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/sneakers">SNKRS</a>
+      <div>
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart">
+              <mat-icon [matBadge]="_customerService.customer.cartItems.length" matBadgeColor="warn"
+                [matBadgeHidden]="isBadgeHidden" matBadgeSize="small">shopping_cart</mat-icon>
+            </a>
+          </li>
+          <li class="nav-item login_btn_continer" *ngIf="!_authService.isLoggedIn">
+            <button mat-button class="login_btn" id="login-btn"
+              [routerLink]="['../', {outlets: { modal: 'authenticate' } }]">Login</button>
+          </li>
+          <li class="nav-item login_btn_continer" *ngIf="_authService.isLoggedIn">
+            <button mat-button class="login_btn" (click)="_authService.logout()">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="mt-5" style="height: calc(100vh - 3rem); overflow-y: auto; background-color: #fff;">
+    <router-outlet name="modal"></router-outlet>
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

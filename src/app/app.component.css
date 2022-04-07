@@ -1,0 +1,22 @@
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-link .mat-icon {
+  cursor: pointer;
+}
+
+.login_btn {
+  background-color: transparent;
+  border-radius: 2px;
+  border: 2px solid #707071;
+  line-height: unset;
+  letter-spacing: 0.03rem;
+  padding: 5px;
+  color: inherit;
+  margin-right: 0;
+}
+
+.navbar-brand {
+  outline: none;
+}
